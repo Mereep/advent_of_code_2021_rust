@@ -1,7 +1,7 @@
 use std::collections::HashSet;
 use std::ops::Div;
 
-/// Containins a field for the all the numbers being drawn and
+/// Contains a field for the all the numbers being drawn and
 /// the linearized(!) matrices of numbers for the Bingo sheets
 #[derive(Debug)]
 struct GameWorld<T> {
@@ -317,5 +317,4 @@ pub fn task2(data: &Vec<String>) -> u64 {
         }
     }
     return 0;
-
 }
