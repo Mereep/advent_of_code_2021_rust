@@ -4,6 +4,8 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
+
 use std::fs;
 use std::io::{Read};
 
@@ -31,9 +33,17 @@ fn main() {
     println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
      */
 
+    /*
+
     let data = load_data("day4", true);
     let res1 = day4::task1(&data);
     let res2 = day4::task2(&data);
+    println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
+    */
+
+    let data = load_data("day5", false);
+    let res1 = day5::task1(&data);
+    let res2 = day5::task2(&data);
     println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
 
 }
