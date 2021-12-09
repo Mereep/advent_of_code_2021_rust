@@ -8,6 +8,7 @@ mod day5;
 mod day6;
 mod day7;
 mod day8;
+mod day9;
 
 use std::fs;
 use std::io::{Read};
@@ -64,9 +65,15 @@ fn main() {
     println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
      */
 
+    /*
     let data = load_data("day8", false);
     let res1 = day8::task1(&data);
     let res2 = day8::task2(&data);
+    println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
+     */
+    let data = load_data("day9", false);
+    let res1 = day9::task1(&data);
+    let res2 = day9::task2(&data);
     println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
 }
 
@@ -84,5 +91,4 @@ fn load_data(day: &'static str, load_test: bool) -> Vec<String> {
     lines.lines().map(|line| {
         String::from(line.trim())
     }).collect()
-
 }
