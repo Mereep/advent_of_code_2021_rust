@@ -1,5 +1,3 @@
-use crate::day4::parse_line_of_numbers;
-
 #[derive(Debug)]
 struct Floor {
     matrix: Vec<Vec<u64>>
@@ -11,7 +9,10 @@ impl Floor {
         let matrix = lines
             .iter()
             .map(|line| line.chars()
-                .map(|c| (c as u64 - '0' as u64) as u64).collect())
+                // this is a trick to transform the character (ASCII POS)
+                // to its actual value ('0' -> 0)
+                .map(|c| (c as u64 - '0' as u64) as u64)
+                .collect())
             .collect::<Vec<Vec<u64>>>();
 
         return Floor {
@@ -131,6 +132,8 @@ impl Floor {
         self.get_lowest_points().iter().map(|p| self.get(p.0, p.1)).collect()
     }
 }
+
+
 pub fn task1(data: &Vec<String>) -> u64 {
     println!("Executing day 9 task 2");
     let floor = Floor::from_input_lines(data);

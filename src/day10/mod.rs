@@ -1,5 +1,3 @@
-use crate::day4::parse_line_of_numbers;
-
 /// List of sorted open brackets
 const OPEN_BRACKETS: [char; 4] =    ['(', '{', '<', '['];
 /// List of sorted closing brackets (relative to OPEN_BRACKETS)
