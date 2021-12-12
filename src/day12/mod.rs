@@ -1,5 +1,4 @@
 use std::collections::HashMap;
-use std::ptr::addr_of;
 
 /// Stores all connections as entries in a map as in 'a' -> C, D, end
 #[derive(Debug)]
@@ -51,10 +50,7 @@ impl Cave {
         current_track.push(from);
         // found an end-node?
         if from == "end" {
-            if !found_paths.contains(current_track) {
-                found_paths.push(current_track.clone())
-            }
-            return;
+            found_paths.push(current_track.clone())
         }
 
         // iterate over all paths
@@ -84,10 +80,7 @@ impl Cave {
         // found an end-node?
         current_track.push(from);
         if from == "end" {
-            if !found_paths.contains(current_track) {
-                found_paths.push(current_track.clone())
-            }
-            return;
+            found_paths.push(current_track.clone());
         }
 
         for neighbour in self.edges.get(from.into()).unwrap() {
@@ -152,7 +145,7 @@ pub fn task1(data: &Vec<String>) -> u64 {
     println!("Executing day 12 task 1");
     let cave = Cave::from_input(data);
     let paths = cave.gather_paths(false);
-    println!("{:?}, \n {:?}" , cave, paths);
+    // println!("{:?}, \n {:?}" , cave, paths);
     return paths.len() as u64;
 }
 
@@ -160,6 +153,6 @@ pub fn task2(data: &Vec<String>) -> u64 {
     println!("Executing day 12 task 2");
     let cave = Cave::from_input(data);
     let paths = cave.gather_paths(true);
-    println!("{:?}, \n {:?}" , cave, paths);
+    // println!("{:?}, \n {:?}" , cave, paths);
     return paths.len() as u64;
 }
