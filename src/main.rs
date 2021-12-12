@@ -1,5 +1,4 @@
 #![allow(dead_code)]
-
 mod day1;
 mod day2;
 mod day3;
@@ -11,6 +10,7 @@ mod day8;
 mod day9;
 mod day10;
 mod day11;
+mod day12;
 
 use std::fs;
 use std::io::{Read};
@@ -89,9 +89,15 @@ fn main() {
     println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
      */
 
+    /*
     let data = load_data("day11", true);
     let res1 = day11::task1(&data);
     let res2 = day11::task2(&data);
+    println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
+    */
+    let data = load_data("day12", false);
+    let res1 = day12::task1(&data);
+    let res2 = day12::task2(&data);
     println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
 }
 

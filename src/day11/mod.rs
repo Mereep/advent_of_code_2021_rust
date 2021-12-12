@@ -177,6 +177,7 @@ impl Floor {
         flashed_total
     }
 }
+
 pub fn task1(data: &Vec<String>) -> u64 {
     println!("Executing day 11 task 1");
     let mut floor = Floor::from_input_lines(data);
