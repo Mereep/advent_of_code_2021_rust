@@ -11,6 +11,7 @@ mod day9;
 mod day10;
 mod day11;
 mod day12;
+mod day13;
 
 use std::fs;
 use std::io::{Read};
@@ -95,10 +96,15 @@ fn main() {
     let res2 = day11::task2(&data);
     println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
     */
-    let data = load_data("day12", false);
+    /*let data = load_data("day12", false);
     let res1 = day12::task1(&data);
     let res2 = day12::task2(&data);
-    println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);
+    println!("Result 1: {:?}\nResult 2: {:?}", res1, res2);*/
+
+    let data = load_data("day13", false);
+    let res1 = day13::task1(&data);
+    let res2 = day13::task2(&data);
+    println!("Result 1: {:?}\nResult 2: {:?}", res1, res2)
 }
 
 /// Will load a text file into lines which must be under `/src/dayXY/input.txt`
